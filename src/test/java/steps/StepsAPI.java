@@ -1,150 +1,93 @@
 package steps;
 
-import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
-import models.AccountIfo;
+import helpers.Request;
+import io.restassured.response.Response;
+import models.Employee;
 import models.User;
-import spec.Request;
 
 import static io.restassured.RestAssured.given;
 
-@JsonIgnoreProperties(ignoreUnknown = true)
 public class StepsAPI {
-    public int registerNewUser() {
-        final User createUser = new User();
-        createUser.setEmail("eve.holt@reqres.in");
-        createUser.setPassword("pistol");
+
+    public Response registerNewUser(User user) {
         return given()
                 .spec(Request.spec())
-                .body(createUser)
+                .body(user)
                 .log().uri()
                 .log().body()
                 .when()
-                .post("/register")
-                .then()
-                .log().body()
-                .extract()
-                .path("id");
+                .post("/register");
     }
 
-    public void getInvalidUserRequest(final int id) {
-        given()
-                .spec(Request.spec())
-                .when()
-                .get("/users/{id}", id)
-                .then()
-                .statusCode(404);
-
-    }
-
-    public String setLoginUser() {
-        final User loginUser = new User();
-        loginUser.setEmail("eve.holt@reqres.in");
-        loginUser.setPassword("cityslicka");
+    public Response getInvalidUserRequest(final int id) {
         return given()
                 .spec(Request.spec())
-                .body(loginUser)
+                .when()
+                .get("/users/{id}", id);
+    }
+
+    public Response loginUser(User user) {
+        return given()
+                .spec(Request.spec())
+                .body(user)
                 .log().uri()
                 .log().body()
                 .when()
-                .post("/login")
-                .then()
-                .log().body()
-                .extract()
-                .path("token");
+                .post("/login");
     }
 
-    public void updateRequest(final String id) {
-        final User user = new User();
-        user.setPassword("qwery1");
-        given()
+    public Response updateUserRequest(final String id, final User user) {
+        return given()
                 .spec(Request.spec()).body(user)
                 .log().uri()
                 .log().body()
                 .when()
-                .put("/users/{id}", id)
-                .then()
-                .statusCode(404);
+                .put("/users/{id}", id);
     }
 
-    public void createInvalidUser() {
-        final User createUser = new User();
-        createUser.setEmail(null);
-        createUser.setPassword(null);
-        given()
+    public Response createInvalidUser(User user) {
+        return given()
                 .spec(Request.spec())
-                .body(createUser)
+                .body(user)
                 .log().uri()
                 .log().body()
                 .when()
-                .post("/users")
-                .then()
-                .log().body().statusCode(404);
-
+                .post("/users");
     }
 
-    public void createUserWithValidInfo() {
-        final AccountIfo createUser = new AccountIfo();
-        createUser.setName("Morpheus");
-        createUser.setJob("Team-Lead");
-        given()
+    public Response createUserWithValidInfo(Employee employee) {
+        return given()
                 .spec(Request.spec())
-                .body(createUser)
+                .body(employee)
                 .log().uri()
                 .log().body()
                 .when()
-                .post("/users")
-                .then()
-                .statusCode(201);
+                .post("/users");
     }
 
 
-    public void updateAccountRequest() {
-        final AccountIfo accountIfo = new AccountIfo();
-        accountIfo.setName("Morpheus");
-        accountIfo.setJob("SMM manager");
-        given()
+    public Response updateEmployeeRequest(final int id, Employee employee) {
+        return given()
                 .spec(Request.spec())
-                .body(accountIfo)
+                .body(employee)
                 .when()
-                .put("/users/2")
-                .then()
-                .log().body().statusCode(200);
-
+                .put("/users/{id}", id);
     }
 
-    public void getUserById(final int id) {
-        given()
+    public Response getUserById(final int id) {
+        return given()
                 .spec(Request.spec())
                 .log().uri()
                 .when()
-                .get("/users/{id}", id)
-                .then()
-                .log().body().statusCode(200);
-
+                .get("/users/{id}", id);
     }
 
-    public void deleteUser(final int id) {
-        given()
+    public Response deleteUser(final int id) {
+        return given()
                 .spec(Request.spec())
                 .log().uri()
                 .when()
-                .delete("/users/{id}", id)
-                .then()
-                .statusCode(204);
-
-
+                .delete("/users/{id}", id);
     }
 
-    public void loginWithoutPassword(String email) {
-        final User userLogin = new User();
-        userLogin.setEmail(email);
-        given()
-                .spec(Request.spec())
-                .body(userLogin)
-                .when()
-                .post("/login")
-                .then()
-                .log().body().statusCode(400);
-
-    }
 }

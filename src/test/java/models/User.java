@@ -9,7 +9,6 @@ public class User implements Serializable {
     private String email;
     private String password;
 
-
     public String getEmail() {
         return email;
     }
@@ -25,5 +24,4 @@ public class User implements Serializable {
     public void setPassword(String password) {
         this.password = password;
     }
-
 }

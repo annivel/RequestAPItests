@@ -1,4 +1,4 @@
-package spec;
+package helpers;
 
 import config.Config;
 import io.restassured.builder.RequestSpecBuilder;
@@ -6,7 +6,6 @@ import io.restassured.http.ContentType;
 import io.restassured.specification.RequestSpecification;
 
 import static helpers.LogFilter.filters;
-
 
 public class Request {
     private static final RequestSpecification spec = new RequestSpecBuilder()

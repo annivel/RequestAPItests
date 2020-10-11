@@ -13,7 +13,6 @@ public interface APIConfig extends Config {
 
     @Key("api.base.path")
     String basePath();
-
 }
 
 
