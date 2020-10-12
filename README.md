@@ -31,6 +31,9 @@ For review test execution, you can check Jenkins implementation https://jenkins.
 
 ## Results
 
+![allureGraph](https://user-images.githubusercontent.com/61629124/95737966-29711480-0c91-11eb-8589-3635e7dc2ebc.png)
+
+
 The result of the test execution is three failed tests that shows exist bugs such as :
 - Opportunity to find already delete user;
 - Free access to update info by unregistered user;
