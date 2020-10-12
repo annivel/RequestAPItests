@@ -12,7 +12,9 @@ This project is implemented such as technologies and libraries as:
   - Jenkins
   
  ## Test execution 
-  
+ 
+Test objective: https://reqres.in/
+
 Tests is created by test case scenarios implemented Rest Assured using **GET, POST, PUT, DELETE, UPDATE** methods.
  
  In addition, you can check tests case by the link:
