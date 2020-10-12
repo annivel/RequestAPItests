@@ -110,7 +110,6 @@ public class ReqresTests extends TestBase {
     void updateUserAccount() {
         step("Put unregistered account", () -> {
             final User user = new User() {{
-                ;
                 setPassword("qwery1");
                 setEmail("test@email.com");
             }};
