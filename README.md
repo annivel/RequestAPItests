@@ -24,7 +24,8 @@ Tests created using test case scenarios and implemented Rest Assured using **GET
 
 ![AllureRepurt](https://user-images.githubusercontent.com/61629124/95727608-0fc8d080-0c83-11eb-9e24-8ecb39cf1302.png)
 
-For review test execution, you can check Jenkins with Allure Reports  implementation http://34.70.38.8/jenkins/job/rest-assured-tests-api/allure/
+For review test execution, you can check Jenkins with Allure Reports  implementation
+- http://34.70.38.8/jenkins/job/rest-assured-tests-api/allure/
 
 
 ----
