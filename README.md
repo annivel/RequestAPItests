@@ -15,7 +15,7 @@ This project is implemented such as technologies and libraries as:
  
 Test objective: https://reqres.in/
 
-Tests is created by test case scenarios implemented Rest Assured using **GET, POST, PUT, DELETE, UPDATE** methods.
+Tests created by test case scenarios implemented Rest Assured using **GET, POST, PUT, DELETE, UPDATE** methods.
  
  In addition, you can check tests case by the link:
 - https://drive.google.com/file/d/1UJteu1ReXuR1IuAkXugizHp81oC20yLG/view?usp=sharing
