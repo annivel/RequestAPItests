@@ -37,6 +37,6 @@ For review test execution, you can check Jenkins implementation https://jenkins.
 The result of the test execution is three failed tests that shows exist bugs such as :
 - Opportunity to find already delete user;
 - Free access to update info by unregistered user;
-- Opportunity to login to website without password and login;
+- Opportunity to login without password and login;
 
 
