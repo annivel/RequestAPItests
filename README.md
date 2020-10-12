@@ -18,8 +18,13 @@ Tests is created by test case scenarios implemented Rest Assured using **GET, PO
  In addition, you can check tests case by the link:
 - https://drive.google.com/file/d/1UJteu1ReXuR1IuAkXugizHp81oC20yLG/view?usp=sharing
 
-During tests execution was created Allure Reports that have logs, HTTP requests 
+**During tests execution was created Allure Reports that have logs, HTTP requests**
+
 ![AllureRepurt](https://user-images.githubusercontent.com/61629124/95727608-0fc8d080-0c83-11eb-9e24-8ecb39cf1302.png)
+
+http://192.168.0.216:63436/index.html#suites/9a8f2b1f5648a17340f3902eebd0eeab/cb59a248ce9db762/
+
+Also, you can check Jenkins with test execution https://jenkins.autotests.cloud/job/RestAssuredTests/
 ----
 
 ## Results
