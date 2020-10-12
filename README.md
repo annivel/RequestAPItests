@@ -8,7 +8,7 @@ This project is implemented such as technologies and libraries as:
   - Gradle
   - JUnit5
   - Rest Assured
-  - Allure Reports (logs, screenshot)
+  - Allure Reports (logs, screenshots)
   - Jenkins
   
  ## Test execution 
