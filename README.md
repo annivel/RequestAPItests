@@ -26,7 +26,7 @@ Tests created using test case scenarios and implemented Rest Assured using **GET
 
 http://192.168.0.216:63436/index.html#suites/9a8f2b1f5648a17340f3902eebd0eeab/cb59a248ce9db762/
 
-Also, you can check Jenkins with test execution https://jenkins.autotests.cloud/job/RestAssuredTests/
+For review test execution, you can check Jenkins implementation https://jenkins.autotests.cloud/job/RestAssuredTests/
 ----
 
 ## Results
