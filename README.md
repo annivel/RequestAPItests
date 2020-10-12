@@ -28,7 +28,6 @@ http://192.168.0.216:63436/index.html#suites/9a8f2b1f5648a17340f3902eebd0eeab/cb
 
 For review test execution, you can check Jenkins implementation https://jenkins.autotests.cloud/job/RestAssuredTests/
 ----
-
 ## Results
 
 ![allureGraph](https://user-images.githubusercontent.com/61629124/95737966-29711480-0c91-11eb-8589-3635e7dc2ebc.png)
